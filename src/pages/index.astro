@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Portfolio">
+    <Navbar />
+    <main>
+        <Hero />
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        width: 90%;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+</style>
