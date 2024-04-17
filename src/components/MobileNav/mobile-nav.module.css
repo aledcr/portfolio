@@ -1,0 +1,113 @@
+.sidenav-open-btn {
+    background: none;
+
+    display: none;
+    margin-left: auto;
+    /* margin-right: 1rem; */
+    /* margin-block: 1rem; */
+
+    opacity: 0.7;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.sidenav-open-btn:hover {
+    opacity: 1;
+}
+
+.sidenav-open-btn svg {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    color: #2b2b2b;
+}
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    height: 100%;
+
+    background-color: white;
+    overflow-x: hidden;
+
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+
+    transition: 0.5s;
+}
+
+.sidenav ul {
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.link {
+    display: block;
+
+    padding-left: 1rem;
+    font-size: 1.7rem;
+}
+
+.close-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 1rem;
+
+    background: none;
+
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.close-btn svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+    opacity: 1;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+    .sidenav-open-btn {
+        display: block;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .sidenav-open-btn {
+        display: block;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .sidenav-open-btn {
+        display: none;
+    }
+}
+
+/*  X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .sidenav-open-btn {
+        display: none;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .sidenav-open-btn {
+        display: none;
+    }
+}
