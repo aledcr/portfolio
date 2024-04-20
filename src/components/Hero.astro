@@ -1,18 +1,88 @@
-<div>
-    <h1>Hello! I'm <b>Alessandro</b></h1>
+<section class="hero">
+    <div>
+        <h1>Ciao! Sono <b>Alessandro</b></h1>
+        <p>
+            <!--  Uno sviluppatore front-end in erba a cui piace creare applicazioni
+            web solide e scalabili con un'ottima esperienza utente -->
+            I’m a front-end developer who likes to craft solid and scalable front-end
+            products with great user experiences
+        </p>
 
-    <p>
-        I’m a front-end developer who likes to craft solid and scalable
-        front-end products with great user experiences
-    </p>
-</div>
+        <button>Contattami!</button>
+    </div>
+
+    <!-- <img src="/hero-img.png" alt="Hero Image" /> -->
+</section>
 
 <style>
+    section.hero {
+        /* background: red; */
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 2rem;
+    }
+
     h1 {
+        font-size: 4rem;
         font-weight: normal;
     }
 
     p {
-        max-width: 30ch;
+        margin-block: 1rem;
+        max-width: 40ch;
+    }
+
+    button {
+        background: none;
+
+        padding: 1rem 2rem;
+
+        font-size: 1.1rem;
+        color: #4f3131;
+        border: 1px solid #4f3131;
+        border-radius: 5rem;
+
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    button:hover,
+    button:focus-visible {
+        color: white;
+        background-color: #4f3131;
+    }
+
+    img {
+        position: relative;
+        left: 12rem;
+
+        width: 30rem;
+        height: 30rem;
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        section.hero {
+            flex-direction: row;
+        }
+    }
+
+    /*  X-Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        section.hero {
+            flex-direction: row;
+        }
+    }
+
+    /* XX-Large devices (larger desktops, 1400px and up) */
+    @media (min-width: 1400px) {
+        section.hero {
+            flex-direction: row;
+        }
     }
 </style>
