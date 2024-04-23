@@ -1,5 +1,9 @@
+---
+import { BsGithub, BsLinkedin, BsEnvelopeFill } from 'react-icons/bs';
+---
+
 <section class="hero">
-    <div>
+    <div class="hero-text-container">
         <h1>Ciao! Sono <b>Alessandro</b></h1>
         <p>
             <!--  Uno sviluppatore front-end in erba a cui piace creare applicazioni
@@ -8,28 +12,51 @@
             products with great user experiences
         </p>
 
-        <button>Contattami!</button>
+        <div class="hero-contacts-container">
+            Contattami!
+            <div class="hero-contacts">
+                <a target="_blank" href="https://github.com/aledcr">
+                    <BsGithub />
+                </a>
+                <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/alessandro-della-corte/"
+                >
+                    <BsLinkedin />
+                </a>
+                <a target="_blank" href="mailto:dellacortealex4@gmail.com">
+                    <BsEnvelopeFill />
+                </a>
+            </div>
+        </div>
     </div>
 
-    <!-- <img src="/hero-img.png" alt="Hero Image" /> -->
+    <img src="/hero-img.svg" alt="Hero Image" />
 </section>
 
 <style>
     section.hero {
-        /* background: red; */
-
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
 
         width: 100%;
         padding: 2rem;
     }
 
+    .hero-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     h1 {
+        width: fit-content;
+
         font-size: 4rem;
         font-weight: normal;
+        text-align: center;
     }
 
     p {
@@ -37,29 +64,55 @@
         max-width: 40ch;
     }
 
-    button {
-        background: none;
-
-        padding: 1rem 2rem;
-
-        font-size: 1.1rem;
-        color: #4f3131;
-        border: 1px solid #4f3131;
-        border-radius: 5rem;
-
-        transition: all 0.5s;
-        cursor: pointer;
+    .hero-contacts-container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
     }
 
-    button:hover,
-    button:focus-visible {
+    .hero-contacts {
+        display: flex;
+
+        align-items: center;
+    }
+
+    .hero-contacts a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0.5rem;
+        aspect-ratio: 1/1;
+
+        opacity: 0.7;
+        transition: all 0.5s;
+
+        text-decoration: none;
         color: white;
-        background-color: #4f3131;
+    }
+
+    .hero-contacts a:hover,
+    .hero-contacts a:focus-visible {
+        opacity: 1;
+    }
+
+    .hero-contacts a svg {
+        position: relative;
+        bottom: 0rem;
+
+        width: 1.5rem;
+        height: 1.5rem;
+
+        transition: all 0.5s;
+    }
+
+    .hero-contacts a:hover > svg,
+    .hero-contacts a:focus-visible > svg {
+        bottom: 0.5rem;
     }
 
     img {
-        position: relative;
-        left: 12rem;
+        display: none;
 
         width: 30rem;
         height: 30rem;
@@ -69,6 +122,17 @@
     @media (min-width: 992px) {
         section.hero {
             flex-direction: row;
+            justify-content: space-between;
+        }
+        .hero-text-container {
+            display: block;
+        }
+        h1 {
+            white-space: nowrap;
+        }
+
+        img {
+            display: block;
         }
     }
 
@@ -76,6 +140,13 @@
     @media (min-width: 1200px) {
         section.hero {
             flex-direction: row;
+            justify-content: space-between;
+        }
+        .hero-text-container {
+            display: block;
+        }
+        img {
+            display: block;
         }
     }
 
@@ -83,6 +154,13 @@
     @media (min-width: 1400px) {
         section.hero {
             flex-direction: row;
+            justify-content: space-between;
+        }
+        .hero-text-container {
+            display: block;
+        }
+        img {
+            display: block;
         }
     }
 </style>
