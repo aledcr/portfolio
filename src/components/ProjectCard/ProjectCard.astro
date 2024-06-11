@@ -1,0 +1,26 @@
+---
+import './project-card.css';
+
+interface Props {
+    title: string;
+    img: string;
+    techList: string[];
+}
+
+const { title, img, techList } = Astro.props;
+---
+
+<li class=`project ${techList.length == 0 ? 'project--empty' : ''}`>
+    <img src={img} alt={title} />
+
+    <div class="title-container">
+        <span>{title}</span>
+        <ul class="tech-stack-list">
+            {techList.map((item) => <li class="tech">{item}</li>)}
+        </ul>
+    </div>
+
+    <p>
+        <slot />
+    </p>
+</li>
