@@ -18,6 +18,22 @@ import Projects from '../components/Projects.astro';
 </Layout>
 
 <style>
+    :root {
+        --bg: hsl(98, 22%, 90%);
+        --white: hsl(0, 100%, 99%);
+        --black: hsl(0, 0%, 17%);
+        --black-500: hsl(0, 0%, 50%);
+
+        --primary: hsl(98, 22%, 70%);
+        --primary-500: hsl(98, 22%, 50%);
+        --secondary: hsl(29, 68%, 63%);
+    }
+
+    html {
+        color: var(--black);
+        background-color: var(--bg);
+    }
+
     main {
         margin: auto;
         padding: 0.5rem;
@@ -25,7 +41,6 @@ import Projects from '../components/Projects.astro';
         width: 100%;
         max-width: 1500px;
 
-        color: white;
         font-size: 20px;
         line-height: 1.6;
     }
