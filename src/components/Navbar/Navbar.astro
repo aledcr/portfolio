@@ -1,5 +1,6 @@
 ---
-import { MobileNav } from '../MobileNav/MobileNav';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+
 import './navbar.css';
 ---
 
@@ -10,21 +11,21 @@ import './navbar.css';
         </li>
 
         <li>
-            <a href="#portfolio"> Portfolio </a>
+            <a href="#portfolio"> Progetti </a>
         </li>
 
-        <li>
-            <a href="#about-me"> About me </a>
+        <li class="social-nav-item">
+            <a href="#about-me">
+                <BsGithub />
+                <span>aledcr</span>
+            </a>
         </li>
 
-        <li>
-            <a href="#contact-me"> Contact me</a>
-        </li>
-
-        <li>
-            <a class="link-btn" href="#cv"> Curriculum</a>
+        <li class="social-nav-item">
+            <a href="#contact-me">
+                <BsLinkedin />
+                <span>Alessandro Della Corte</span>
+            </a>
         </li>
     </ul>
-
-    <MobileNav client:load />
 </nav>
