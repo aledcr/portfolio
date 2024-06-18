@@ -17,7 +17,7 @@ import Projects from '../components/Projects.astro';
     </main>
 </Layout>
 
-<style>
+<style is:global>
     :root {
         --bg: hsl(98, 22%, 91%);
         --white: hsl(0, 100%, 99%);
@@ -44,5 +44,16 @@ import Projects from '../components/Projects.astro';
 
         font-size: 20px;
         line-height: 1.6;
+    }
+
+    a {
+        color: var(--secondary);
+        transition: 0.2s;
+    }
+
+    a:hover,
+    a:focus-visible {
+        color: var(--secondary-700);
+        cursor: pointer;
     }
 </style>
