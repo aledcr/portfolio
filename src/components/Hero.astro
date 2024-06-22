@@ -3,166 +3,217 @@ import { BsGithub, BsLinkedin, BsEnvelopeFill } from 'react-icons/bs';
 ---
 
 <section class="hero">
-    <div class="hero-text-container">
-        <h1>Ciao! Sono <b>Alessandro</b></h1>
+    <img src="/hero-img.jpg" alt="Hero Image" />
+
+    <h1 class="title">Ciao! Sono <b>Alessandro</b></h1>
+
+    <div class="text-container">
         <p>
-            <!--  Uno sviluppatore front-end in erba a cui piace creare applicazioni
-            web solide e scalabili con un'ottima esperienza utente -->
-            I’m a front-end developer who likes to craft solid and scalable front-end
-            products with great user experiences
+            Uno sviluppatore front-end in erba a cui piace creare applicazioni
+            web solide e scalabili con un'ottima esperienza utente
         </p>
 
-        <div class="hero-contacts-container">
-            Contattami!
-            <div class="hero-contacts">
-                <a target="_blank" href="https://github.com/aledcr">
-                    <BsGithub />
-                </a>
-                <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/alessandro-della-corte/"
-                >
-                    <BsLinkedin />
-                </a>
-                <a target="_blank" href="mailto:dellacortealex4@gmail.com">
-                    <BsEnvelopeFill />
-                </a>
-            </div>
-        </div>
+        <p>Se vuoi saperne di più <a href="">scarica il mio CV</a> :)</p>
     </div>
 
-    <img src="/hero-img.svg" alt="Hero Image" />
+    <ul class="mobile-contacts">
+        <li>
+            <a target="_blank" href="https://github.com/aledcr">
+                <BsGithub />
+                <span>aledcr</span>
+            </a>
+        </li>
+
+        <li>
+            <a
+                target="_blank"
+                href="https://www.linkedin.com/in/alessandro-della-corte/"
+            >
+                <BsLinkedin />
+                <span>Alessandro Della Corte</span>
+            </a>
+        </li>
+
+        <li>
+            <a target="_blank" href="mailto:dellacortealex4@gmail.com">
+                <BsEnvelopeFill />
+                <span>dellacortealex4@gmail.com</span>
+            </a>
+        </li>
+    </ul>
 </section>
 
 <style>
     section.hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-areas:
+            'img title'
+            'text text'
+            'socials socials';
+        align-items: flex-start;
+        justify-items: flex-start;
 
         width: 100%;
-        padding: 2rem;
-
-        overflow: hidden;
     }
 
-    .hero-text-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+    img {
+        grid-area: img;
 
-    h1 {
+        width: 25vw;
+        height: 25vw;
+        aspect-ratio: 1;
+
+        border-top-left-radius: 10vw;
+        border-bottom-right-radius: 10vw;
+    }
+    .hero .title {
+        grid-area: title;
+
         width: fit-content;
 
-        font-size: 4rem;
+        font-size: 1.6rem;
         font-weight: normal;
-        text-align: center;
+        text-align: start;
     }
 
-    p {
+    .hero .title b {
+        color: var(--primary-500);
+    }
+
+    .hero .text-container {
+        grid-area: text;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .hero .text-container p {
+        font-size: 1rem;
+
         margin-block: 1rem;
         max-width: 40ch;
     }
 
-    .hero-contacts-container {
+    .mobile-contacts {
+        list-style: none;
+
+        grid-area: socials;
+
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         align-items: center;
     }
 
-    .hero-contacts {
-        display: flex;
-
-        align-items: center;
-    }
-
-    .hero-contacts a {
+    .mobile-contacts a {
         display: flex;
         align-items: center;
-        justify-content: center;
-
-        padding: 0.5rem;
-        aspect-ratio: 1/1;
-
-        opacity: 0.7;
-        transition: all 0.5s;
-
-        text-decoration: none;
-        color: white;
+        gap: 0.5rem;
     }
 
-    .hero-contacts a:hover,
-    .hero-contacts a:focus-visible {
-        opacity: 1;
-    }
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        section.hero {
+            grid-template-areas:
+                'img title'
+                'img text'
+                'socials socials';
+            grid-template-columns: auto 80%;
+            column-gap: 3rem;
 
-    .hero-contacts a svg {
-        position: relative;
-        bottom: 0rem;
+            padding: 2rem;
+        }
 
-        width: 1.5rem;
-        height: 1.5rem;
+        .hero .title {
+            font-size: 2rem;
+            white-space: nowrap;
+        }
 
-        transition: all 0.5s;
-    }
+        .hero .text-container p {
+            font-size: 1.1rem;
+        }
 
-    .hero-contacts a:hover > svg,
-    .hero-contacts a:focus-visible > svg {
-        bottom: 0.5rem;
-    }
-
-    img {
-        display: none;
-
-        width: 30rem;
-        height: 30rem;
+        .mobile-contacts {
+            display: none;
+        }
     }
 
     /* Large devices (desktops, 992px and up) */
     @media (min-width: 992px) {
         section.hero {
-            flex-direction: row;
-            justify-content: space-between;
+            grid-template-areas:
+                'img title'
+                'img text'
+                'socials socials';
+            grid-template-columns: auto 80%;
+            column-gap: 3rem;
+
+            padding: 2rem;
         }
-        .hero-text-container {
-            display: block;
-        }
-        h1 {
+
+        .hero .title {
+            font-size: 3rem;
             white-space: nowrap;
         }
 
-        img {
-            display: block;
+        .hero .text-container p {
+            font-size: 1.2rem;
+        }
+
+        .mobile-contacts {
+            display: none;
         }
     }
 
     /*  X-Large devices (large desktops, 1200px and up) */
     @media (min-width: 1200px) {
         section.hero {
-            flex-direction: row;
-            justify-content: space-between;
+            grid-template-areas:
+                'img title'
+                'img text'
+                'socials socials';
+
+            grid-template-columns: auto 80%;
+            column-gap: 3rem;
+
+            padding: 2rem;
         }
-        .hero-text-container {
-            display: block;
-        }
+
         img {
-            display: block;
+            width: 18vw;
+            height: 18vw;
+        }
+
+        .text-container p {
+            font-size: 1.2rem;
+        }
+
+        .mobile-contacts {
+            display: none;
         }
     }
 
     /* XX-Large devices (larger desktops, 1400px and up) */
     @media (min-width: 1400px) {
         section.hero {
-            flex-direction: row;
-            justify-content: space-between;
+            grid-template-areas:
+                'img title'
+                'img text';
+            grid-template-columns: auto 80%;
+            grid-template-rows: auto 15rem;
+            column-gap: 3rem;
+
+            padding: 2rem;
         }
-        .hero-text-container {
-            display: block;
+
+        .text-container p {
+            font-size: 1.2rem;
         }
-        img {
-            display: block;
+
+        .mobile-contacts {
+            display: none;
         }
     }
 </style>
