@@ -31,35 +31,35 @@ nav a {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 768px) {
-    .social-nav-item {
+    nav .social-nav-item {
         display: none;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .social-nav-item {
+    nav .social-nav-item {
         display: none;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .social-nav-item {
+    nav .social-nav-item {
         display: flex;
     }
 }
 
 /*  X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .social-nav-item {
+    nav .social-nav-item {
         display: flex;
     }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-    .social-nav-item {
+    nav .social-nav-item {
         display: flex;
     }
 }
