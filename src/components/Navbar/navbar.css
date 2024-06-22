@@ -26,6 +26,11 @@ nav a {
     font-size: 1.2rem;
 }
 
+nav a[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: var(--black-500);
+}
+
 /* #region Media queries */
 
 /* Small devices (landscape phones, 576px and up) */
@@ -37,6 +42,10 @@ nav a {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    nav {
+        padding-inline: 2rem;
+    }
+
     nav .social-nav-item {
         display: none;
     }
@@ -44,6 +53,10 @@ nav a {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    nav {
+        padding-inline: 2rem;
+    }
+
     nav .social-nav-item {
         display: flex;
     }
@@ -51,6 +64,10 @@ nav a {
 
 /*  X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    nav {
+        padding-inline: 2rem;
+    }
+
     nav .social-nav-item {
         display: flex;
     }
