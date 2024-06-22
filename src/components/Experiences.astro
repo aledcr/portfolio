@@ -1,101 +1,90 @@
-<section>
-    <h1>My experiences</h1>
+<section class="experiences">
+    <div>
+        <h2>Istruzione</h2>
+        <ul>
+            <li>
+                <h3>Academy System Integrator</h3>
+                <span>UMANA S.p.A & GPI Group | 11/2023 – 12/2023</span>
+            </li>
 
-    <div class="experience">
-        <h2>Diploma in IT</h2>
-        <i>I.S.S. B.Focaccia (SA, Italy) | 2015 – 2020</i>
-        <p>
-            <ul>
-                <li>
-                    During the third year I studied the basics of programming
-                    using the C programming language;
-                </li>
-
-                <li>
-                    During the fourth year I approached Object Oriented
-                    Programming using Java
-                </li>
-
-                <li>
-                    The last year was dedicated to web development. I used HTML,
-                    CSS and Javascript for the client, PHP and SQL for the
-                    backend.
-                </li>
-            </ul>
-        </p>
+            <li>
+                <h3>Disploma in IT</h3>
+                <span>I.S.S. B.Focaccia (SA, Italy) | 2015 – 2020</span>
+            </li>
+        </ul>
     </div>
 
-    <div class="experience">
-        <h2>Software developer (work-study)</h2>
-        <i>Sense Square (Penta, SA, Italy) | 04/2019 – 05/2019 </i>
-        <p>
-            A work-study experience. I assisted the employees in:
-            <ul>
-                <li>
-                    Developing a software (written in Pyton) to process and
-                    analyze data (CSV format) gathered from the company’s air
-                    pollution analysis unit;
-                </li>
+    <div>
+        <h2>Esperienze</h2>
+        <ul>
+            <li>
+                <h3>System Integrator</h3>
+                <span>GPI Group | 01/2024 – presente </span>
+            </li>
 
-                <li>
-                    3D modeled the body for the electronic board (Arduino) of
-                    the air pollution analysis unit.
-                </li>
-            </ul>
-        </p>
-    </div>
+            <li>
+                <h3>Sviluppatore Front-end</h3>
+                <span>Freelance | 2020 – 2022 </span>
+            </li>
 
-    <div class="experience">
-        <h2>Front-end developer</h2>
-        <i>Freelance | 2020 – 2022 </i>
-        <p>
-            I worked as a front-end developer for a team that handles the
-            development and maintenance of e-commerce platforms.
-        </p>
-        <p>
-            I was in charge of the UI/UX design (using Figma) and development of
-            web applications written mainly in HTML, CSS and Javascript.
-        </p>
+            <li>
+                <h3>Sviluppatore (Alternanza scuola-lavoro)</h3>
+                <span>Sense Square (Salerno, Italy) | 04/2019 – 05/2019</span>
+            </li>
+        </ul>
     </div>
 </section>
 
 <style>
-    section {
-        margin-block: 2rem;
+    section.experiences {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        margin-block: 3rem;
     }
 
-    h1 {
-        display: block;
-
-        width: fit-content;
-
-        margin-bottom: 1rem;
-
-        font-size: 3rem;
-        font-weight: 400;
+    section.experiences ul {
+        list-style: none;
     }
 
-    .experience {
-        margin-block: 2rem;
-        max-width: 70ch;
+    section.experiences li {
+        margin-block: 1rem;
     }
 
-    i {
-        opacity: 0.7;
-        font-size: 1rem;
+    section.experiences h2 {
+        color: var(--primary-500);
     }
 
-    p {
-        opacity: 0.9;
-
-        font-size: 1rem;
+    section.experiences h3 {
+        font-weight: 500;
     }
 
-    ul {
-        padding-left: 1rem;
+    section.experiences span {
+        font-size: 0.95rem;
+        font-style: italic;
+
+        color: var(--black-500);
     }
 
-    li {
-        font-size: 1rem;
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        section.experiences {
+            gap: 5rem;
+        }
+    }
+
+    /*  X-Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        section.experiences {
+            gap: 5rem;
+        }
+    }
+
+    /* XX-Large devices (larger desktops, 1400px and up) */
+    @media (min-width: 1400px) {
+        section.experiences {
+            gap: 5rem;
+        }
     }
 </style>
